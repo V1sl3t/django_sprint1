@@ -56,7 +56,7 @@ def post_detail(request, pk):
         template = 'blog/detail.html'
         context = {'post': posts[pk]}
         return render(request, template, context)
-    except TypeError and IndexError:
+    except IndexError:
         raise Http404
 
 
